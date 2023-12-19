@@ -9,3 +9,4 @@ print("Maçã" not in frutas) #true
 print(200 in saques) #false
 print(100 in saques) #false
 print("100" in saques) #true
+
