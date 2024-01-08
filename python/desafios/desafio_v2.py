@@ -73,7 +73,7 @@ def cadastrar_conta(AGENCIA,contas,usuarios):
    cpf = input("Informe o cpf do cliente (somente numeros): ")
 
    if cpf in usuarios:
-      numero_conta = len(contas)
+      numero_conta = len(contas)+1
       contas[numero_conta] = {"conta":numero_conta,"agencia":AGENCIA,"usuario":usuarios[cpf]}
    else:
       print("Usuário não existe")
