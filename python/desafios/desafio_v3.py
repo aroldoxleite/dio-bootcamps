@@ -162,7 +162,7 @@ def sacar(clientes):
       conta = recuperar_conta_cliente(cliente)
 
       if conta:
-         valor = float(input("Informe o valor do saque"))
+         valor = float(input("Informe o valor do saque: "))
          transacao = Saque(valor)
          cliente.realizar_transacao(conta,transacao)
       else:
@@ -180,7 +180,7 @@ def depositar(clientes):
       conta = recuperar_conta_cliente(cliente)
 
       if conta:
-         valor = float(input("Informe o valor do depósito"))
+         valor = float(input("Informe o valor do depósito: "))
          transacao = Deposito(valor)
          cliente.realizar_transacao(conta,transacao)
       else:
@@ -240,6 +240,7 @@ def cadastrar_conta(contas,clientes):
       conta = ContaCorrente(cliente,len(contas)+1)
       contas.append(conta)
       cliente.adicionar_conta(conta)
+      print("Conta criada com sucesso!")
    else:
       print("Cliente não encontrado")
 
